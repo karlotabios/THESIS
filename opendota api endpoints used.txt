@@ -1,0 +1,10 @@
+-- GET /publicMatches
+https://api.opendota.com/api/publicMatches
+RETURN EXAMPLE: "[{"match_id":4152158005,"match_seq_num":3597838646,"radiant_win":false,"start_time":1538671273,"duration":366,"avg_mmr":3438,"num_mmr":2,"lobby_type":0,"game_mode":4,"avg_rank_tier":45,"num_rank_tier":4,"cluster":186,"radiant_team":"104,108,63,109,57","dire_team":"112,39,93,31,36"}, ... ]"
+
+-- GET /matches (DOES NOT WORK)
+https://api.opendota.com/api/matches
+
+-- GET /schema
+https://api.opendota.com/api/schema
+RETURN EXAMPLE: "[{"table_name":"api_key_usage","column_name":"account_id","data_type":"bigint"}, ...]"

@@ -1,0 +1,58 @@
+//COMMAND PROMPT
+
+-- To install/use mongodb on docker (images are pulled down from https://hub.docker.com/)
+docker run mongo
+
+-- To run shell session; <name> is the name of the container
+docker exec -it <name> sh
+
+-- To show only running containers use the given command:
+docker ps
+
+-- To show all containers use the given command:
+docker ps -a
+docker container ls -a
+
+-- To show the latest created container (includes all states) use the given command:
+docker ps -l
+
+-- To show n last created containers (includes all states) use the given command:
+docker ps -n=-1
+
+-- To display total file sizes use the given command:
+docker ps -s
+
+-- To exit mongo shell
+exit
+
+-- To stop the mongo container
+docker stop mongo
+
+-- To copy files into the container 
+docker cp foo.txt mycontainer:/foo.txt
+docker cp mycontainer:/foo.txt foo.txt
+
+
+//MONGO SHELL IMAGE COMMANDS
+
+-- Create a new MongoDB database from mongodb shell; after this you will enter actual mongo
+mongo [database]
+
+-- Database will only be created after inserting your 1st document
+
+
+//MONGODB COMMANDS
+
+-- View all MongoDB database
+show dbs
+
+-- Switch MongoDB database
+use [database_name]
+
+-- Importing CSV files
+mongoimport -d database_name -c collection_name --type csv --file csv_location --headerline
+
+-- Importing CSV files
+mongoimport --db dbName --collection collectionName --file fileName.json --jsonArray
+
+mongoimport --db opendota --collection raw --file dataset.json
